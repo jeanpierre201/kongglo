@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function() {
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.index');
 
     Route::get('/admin/comments', [App\Http\Controllers\CommentController::class, 'index'])->name('comment.index');
+    Route::post('/admin/comments/submit', [App\Http\Controllers\PostController::class, 'comment'])->name('post.comment');
     Route::get('/admin/comments/replies', [App\Http\Controllers\ReplyController::class, 'index'])->name('reply.index');
 
 });

@@ -33,12 +33,17 @@
 <div class="card my-4">
   <h5 class="card-header">Leave a Comment:</h5>
   <div class="card-body">
-    <form>
-      <div class="form-group">
-        <textarea class="form-control" rows="3"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+   
+  <form method="post" action="{{route('post.comment')}}" enctype="multipart/form-data">
+          @csrf
+          <div class="form-group">
+          <input type="hidden" name="post_id" value="{{$post->id}}">
+          <textarea name="body" class="form-control" id="body" rows="3"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
     </form>
+
+    
   </div>
 </div>
 

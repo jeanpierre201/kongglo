@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 use App\Models\Post;
+use App\Models\Comment;
 
 class PostController extends Controller
 {
@@ -103,6 +104,24 @@ class PostController extends Controller
         Session()->flash('post-updated-message', 'Post was updated with title: '. $inputs['title']);
         
         return redirect()->route('post.index');
+    }
+
+    public function comment()
+    {
+        $user = auth()->user();
+        $inputs = [
+            'post_id'=> request()->post_id,
+            'username'=> $user->username,
+            'avatar'=> $user->avatar,
+            'body'=> request()->body
+        ];
+
+        Comment::create($inputs);
+
+        Session()->flash('message', 'Comment submitted');
+
+        return back();
+
     }
 
 }

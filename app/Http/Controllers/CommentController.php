@@ -10,6 +10,6 @@ class CommentController extends Controller
 
     public function index()
     {
-        return view('comment.index');
+        return view('admin.comments.index');
     }
 }

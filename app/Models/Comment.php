@@ -16,6 +16,13 @@ class Comment extends Model
         'body',
     ];
 
+    public function getAvatarAttribute($value) {
+        if (strpos($value, 'https://') !== FALSE || strpos($value, 'http://') !== FALSE) {
+            return $value;
+        }
+        return asset('storage/' . $value);
+        }
+
     public function replies() {
         return $this->hasMany(Reply::class);
     }

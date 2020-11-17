@@ -118,7 +118,7 @@ class PostController extends Controller
 
         Comment::create($inputs);
 
-        Session()->flash('message', 'Comment submitted');
+        Session()->flash('comment-message', 'Comment submitted');
 
         return back();
 

@@ -29,8 +29,13 @@
 
 <hr>
 
-<!-- Comments Form -->
+<!-- Comments Form --> 
 <div class="card my-4">
+
+@if(Session('comment-message'))
+<div class="alert alert-success">{{Session::get('comment-message')}}</div>
+@endif
+
   <h5 class="card-header">Leave a Comment:</h5>
   <div class="card-body">
    

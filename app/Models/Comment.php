@@ -9,11 +9,14 @@ class Comment extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     protected $fillable = [
         'post_id',
         'username',
         'avatar',
         'body',
+        'is_active',
     ];
 
     public function getAvatarAttribute($value) {

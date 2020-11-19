@@ -29,6 +29,10 @@
 
 <hr>
 
+@if(Session::has('comment-message'))
+{{session('comment-message')}}
+@endif
+
 <!-- Comments Form --> 
 <div class="card my-4">
 

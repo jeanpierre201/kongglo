@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>All Comments</h1>
+<h1>Comments</h1>
 
 <div class="card shadow mb-4">
             <div class="card-header py-3">

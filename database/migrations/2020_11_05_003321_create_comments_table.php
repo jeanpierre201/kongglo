@@ -19,6 +19,7 @@ class CreateCommentsTable extends Migration
             $table->string('username');
             $table->text('avatar')->nullable();
             $table->text('body');
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }

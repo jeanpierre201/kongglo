@@ -12,7 +12,9 @@ class PostController extends Controller
 {
     public function show(Post $post)
     {
-        return view('blog.blog-post', ['post'=> $post]);
+        $comments = $post->comments()->whereIsActive(1)->get();
+        //return dd($comments);
+        return view('blog.blog-post', ['post'=> $post, 'comments'=> $comments]);
     }
 
     public function create()
@@ -52,7 +54,7 @@ class PostController extends Controller
         //$posts = auth()->user()->posts;
 
         //$posts= Post::all();
-        
+
         //Display Pagination
         $posts = auth()->user()->posts()->paginate(5);
         return view('admin.posts.index', ['posts'=>$posts]);
@@ -94,7 +96,7 @@ class PostController extends Controller
 
         //Authorize
         $this->authorize('update', $post);
-       
+
 
         //update
         //auth()->user()->posts()->save($post);
@@ -102,7 +104,7 @@ class PostController extends Controller
         $post->save();
 
         Session()->flash('post-updated-message', 'Post was updated with title: '. $inputs['title']);
-        
+
         return redirect()->route('post.index');
     }
 

@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
-    
+
     public function index()
     {
         $comments = Comment::all();
@@ -34,7 +34,6 @@ class CommentController extends Controller
 
     public function show($id)
     {
-        
         $post = Post::findOrFail($id);
         $comments = $post->comments;
 

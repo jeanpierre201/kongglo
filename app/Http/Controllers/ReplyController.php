@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Reply;
+use App\Models\Comment;
+use App\Models\Post;
 
 use Illuminate\Http\Request;
 
@@ -25,4 +28,16 @@ class ReplyController extends Controller
 
         return back();
     }
+
+
+    public function show($id)
+    {
+        $post = Post::findOrFail($id);
+        $comment = Comment::findOrFail($id);
+        $replies = $comment->replies;
+
+        return view('admin.comments.replies.show', ['replies'=>$replies, 'comment'=>$comment, 'post'=>$post]);
+        //return dd($comments);
+    }
+
 }

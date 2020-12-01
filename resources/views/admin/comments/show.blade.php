@@ -6,14 +6,14 @@
 
 <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Posts</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Comments from Post <a href="{{route('post', $post->id)}}">{{$post->id}}</a></h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Post id</th>
+                      <th>Comment id</th>
                       <th>Avatar</th>
                       <th>Username</th>
                       <th>Comment</th>
@@ -21,11 +21,12 @@
                       <th>Updated at</th>
                       <th>Approve</th>
                       <th>Delete</th>
+                      <th>Replies</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Post id</th>
+                      <th>Comment id</th>
                       <th>Avatar</th>
                       <th>Username</th>
                       <th>Comment</th>
@@ -33,12 +34,13 @@
                       <th>Updated at</th>
                       <th>Approve</th>
                       <th>Delete</th>
+                      <th>Replies</th>
                     </tr>
                   </tfoot>
                   <tbody>
                   @foreach($comments as $comment)
                     <tr>
-                      <td><a href="{{route('post', $comment->post_id)}}">{{$comment->post_id}}</a></td>
+                      <td><a href="{{route('post', $comment->post_id)}}">{{$comment->id}}</a></td>
                       <td><img height="40px" src="" alt=""></td>
                       <td>{{$comment->username}}</td>
                       <td>{{$comment->body}}</td>
@@ -67,7 +69,7 @@
 
                       @endif
 
-                      
+
                       <!--  -->
                       </td>
                       <td>
@@ -79,6 +81,7 @@
                       </form>
                       <!--  -->
                       </td>
+                      <th><a href="{{route('reply.show', $comment->id)}}">Show Replies</a></th>
                     </tr>
                   @endforeach
                   </tbody>
@@ -86,8 +89,8 @@
               </div>
             </div>
           </div>
-          
-          
+
+
 @endsection
 
 @section('scripts')

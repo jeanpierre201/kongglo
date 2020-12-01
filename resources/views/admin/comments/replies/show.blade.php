@@ -6,14 +6,14 @@
 
 <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Posts</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Replies from Comment <a href="{{route('comment.show', $comment->post_id)}}">{{$comment->id}}</a></h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Reply id</th>
+                      <th>Comment id</th>
                       <th>Avatar</th>
                       <th>Username</th>
                       <th>Comment</th>
@@ -23,7 +23,7 @@
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Post id</th>
+                      <th>Comment id</th>
                       <th>Avatar</th>
                       <th>Username</th>
                       <th>Comment</th>
@@ -34,7 +34,7 @@
                   <tbody>
                   @foreach($replies as $reply)
                     <tr>
-                      <td><a href="{{route('comment', $reply->comment_id)}}">{{$reply->comment_id}}</a></td>
+                      <td><a href="{{route('post', $comment->post_id)}}">{{$reply->id}}</a></td>
                       <td><img height="40px" src="{{$reply->avatar}}" alt=""></td>
                       <td>{{$reply->username}}</td>
                       <td>{{$reply->body}}</td>

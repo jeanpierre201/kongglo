@@ -19,7 +19,8 @@ class CommentController extends Controller
 
     public function destroy(Comment $comment)
     {
-        //$this->authorize('delete', $comment);
+        // if(auth()->user()->id !== $post->user_id)
+        $this->authorize('delete', $comment);
         $comment->delete();
         Session::flash('message', 'Comment was deleted');
         return back();

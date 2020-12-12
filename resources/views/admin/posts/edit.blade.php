@@ -13,8 +13,8 @@
           </div>
 
           <div class="form-group">
-          <div><img height:"100px" src="{{$post->post_image}}" alt=""></div>
-          <input type="file" name="post_image" class="form-control-file" id="post_image">
+          <div><img height="500px" src="{{$post->post_image}}" alt=""></div>
+          <input type="file" name="post_image" style="margin-top: 12px;" class="form-control-file" id="post_image">
           </div>
 
           <div class="form-group">

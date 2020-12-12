@@ -26,8 +26,13 @@
   Interface
 </div>
 
-<!-- Nav Item - Pages Collapse Menu -->
+<!-- Nav Item - Posts Collapse Menu -->
 @include('admin.partials._navbar-posts')
+
+<!-- Nav Item - Categories Collapse Menu -->
+@if(auth()->user()->userHasRole('Admin'))
+@include('admin.partials._navbar-categories')
+@endif
 
 
 <!-- Nav Item - Users Collapse Menu -->

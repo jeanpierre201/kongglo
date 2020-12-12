@@ -20,10 +20,8 @@ class PostController extends Controller
 
     public function create()
     {
-       $categories = Category::All()->pluck('name');
-
+       $categories = Category::all();
        $this->authorize('create', Post::class);
-
        return view('admin.posts.create', ['categories'=>$categories]);
     }
 

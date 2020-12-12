@@ -21,7 +21,7 @@
             <select name="category" class="form-control" id="category" value="">
               <option>Select a category...</option>
               @foreach($categories as $category)
-              <option>{{$category}}</option>
+              <option>{{$category->name}}</option>
               @endforeach
            </select>
           </div>

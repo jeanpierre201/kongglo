@@ -17,6 +17,16 @@
           </div>
 
           <div class="form-group">
+            <label for="category" class="">Category</label>
+            <select name="category" class="form-control" id="category" value="">
+              <option>Select a category...</option>
+              @foreach($categories as $category)
+              <option>{{$category}}</option>
+              @endforeach
+           </select>
+          </div>
+
+          <div class="form-group">
           <textarea name="body" class="form-control" id="body" cols="30" rows="10"></textarea>
           </div>
 

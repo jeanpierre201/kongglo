@@ -36,6 +36,7 @@
                       <th>Post</th>
                       <th>Comments</th>
                       <th>Delete</th>
+                      <th>Category</th>
                     </tr>
                   </thead>
                   <tfoot>
@@ -49,6 +50,7 @@
                       <th>Post</th>
                       <th>Comments</th>
                       <th>Delete</th>
+                      <th>Category</th>
                     </tr>
                   </tfoot>
                   <tbody>
@@ -65,7 +67,7 @@
                       <td>
 
                       <!-- @can('view', $post) -->
- 
+
                       <form method="post" action="{{route('post.destroy', $post->id)}}" enctype="multipart/form-data">
                       @csrf
                       @method('DELETE')
@@ -75,6 +77,7 @@
                       <!-- @endcan -->
 
                       </td>
+                      <th>{{$post->category ? $post->category->name : "Uncategorized"}}</th>
                     </tr>
                   @endforeach
                   </tbody>
@@ -82,8 +85,8 @@
               </div>
             </div>
           </div>
-          
-          
+
+
           <div class="d-flex"><div class="mx-auto">{{$posts->links("pagination::bootstrap-4")}}</div></div>
 @endsection
 

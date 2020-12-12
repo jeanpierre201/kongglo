@@ -2,11 +2,11 @@
 
 @section('content')
 
-<h1>All Comments</h1>
+<h1>Comments</h1>
 
 <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Posts</h6>
+              <h6 class="m-0 font-weight-bold text-primary">All Comments</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -67,7 +67,7 @@
 
                       @endif
 
-                      
+
                       <!--  -->
                       </td>
                       <td>
@@ -86,8 +86,8 @@
               </div>
             </div>
           </div>
-          
-          
+
+
 @endsection
 
 @section('scripts')

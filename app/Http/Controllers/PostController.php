@@ -32,14 +32,22 @@ class PostController extends Controller
 
         $this->authorize('create', Post::class);
 
+        //Get category class to execute a query
+        //$category = Category::class;
+
        // dd(request()->all());
 
        // validations
        $inputs = request()->validate([
            'title'=> 'required | min:8 | max:255',
            'post_image'=> 'file',
-           'body'=> 'required'
+           'body'=> 'required',
+           'category_id'=> 'nullable'
        ]);
+
+    //    if(request('category_id')) {
+    //     $inputs['category_id'] = $category::where('name', request('category_id'))->value('id');
+    //    }
 
        if(request('post_image')) {
            $inputs['post_image'] = request('post_image')->store('images');
@@ -58,8 +66,10 @@ class PostController extends Controller
         //$posts= Post::all();
 
         //Display Pagination
-        $posts = auth()->user()->posts()->paginate(5);
+        $posts = auth()->user()->posts()->paginate(10);
         return view('admin.posts.index', ['posts'=>$posts]);
+
+        //dd($posts);
     }
 
     public function destroy(Post $post)
@@ -76,8 +86,8 @@ class PostController extends Controller
         // $this->authorize('view', $post);
 
         // if(auth()->user()->can('view', $post)) {};
-
-        return view('admin.posts.edit', ['post'=>$post]);
+        $categories = Category::all();
+        return view('admin.posts.edit', ['post'=>$post, 'categories'=>$categories]);
     }
 
     public function update(Post $post)
@@ -86,7 +96,8 @@ class PostController extends Controller
        $inputs = request()->validate([
         'title'=> 'required | min:8 | max:255',
         'post_image'=> 'file',
-        'body'=> 'required'
+        'body'=> 'required',
+        'category_id'=>'nullable'
     ]);
 
     if(request('post_image')) {
@@ -95,6 +106,7 @@ class PostController extends Controller
     }
         $post->title = $inputs['title'];
         $post->body = $inputs['body'];
+        $post->category_id = $inputs['category_id'];
 
         //Authorize
         $this->authorize('update', $post);

@@ -77,7 +77,8 @@
                       <!-- @endcan -->
 
                       </td>
-                      <th>{{$post->category ? $post->category->name : "Uncategorized"}}</th>
+                      <th>{{$post->category_id ? $post->category->name : "Uncategorized"}}</th>
+                      {{-- <th>{{$post->category->name}}</th>  --}}
                     </tr>
                   @endforeach
                   </tbody>

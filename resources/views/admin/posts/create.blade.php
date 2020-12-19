@@ -17,11 +17,11 @@
           </div>
 
           <div class="form-group">
-            <label for="category" class="">Category</label>
-            <select name="category" class="form-control" id="category" value="">
-              <option>Select a category...</option>
+            <label for="category_id" class="">Category</label>
+            <select name="category_id" class="form-control" id="category_id">
+              <option value="1">Select a category...</option>
               @foreach($categories as $category)
-              <option>{{$category->name}}</option>
+              <option value="{{$category->id}}" >{{$category->name}}</option>
               @endforeach
            </select>
           </div>

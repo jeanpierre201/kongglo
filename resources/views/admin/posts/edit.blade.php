@@ -18,6 +18,16 @@
           </div>
 
           <div class="form-group">
+            <label for="category_id" class="">Category</label>
+            <select name="category_id" class="form-control" id="category_id">
+              <option value="{{$post->category_id}}" selected disabled hidden>{{$post->category->name}}</option>
+              @foreach($categories as $category)
+              <option value="{{$category->id}}">{{$category->name}}</option>
+              @endforeach
+           </select>
+          </div>
+
+          <div class="form-group">
           <textarea name="body" class="form-control" id="body" cols="30" rows="10">{{$post->body}}</textarea>
           </div>
 

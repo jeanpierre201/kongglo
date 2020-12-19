@@ -30,7 +30,7 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
-    public function categories() {
+    public function category() {
         return $this->belongsTo(Category::class);
     }
 

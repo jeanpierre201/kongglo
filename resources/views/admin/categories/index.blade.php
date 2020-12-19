@@ -4,6 +4,25 @@
 
 <h1>Categories</h1>
 
+<div class="row">
+
+<div class="col-sm-6">
+
+    <form method="post" action="{{route('category.store')}}" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+        <label for="name" class="">Category</label>
+        <input type="text" name="name" class="form-control" id="name" placeholder="Enter a Category">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Create category</button>
+
+  </form>
+
+</div>
+
+<div class="col-sm-6">
+
 <div class="card shadow mb-4">
     <div class="card-header py-3">
       <h6 class="m-0 font-weight-bold text-primary">All Categories</h6>
@@ -44,6 +63,10 @@
       </div>
     </div>
   </div>
+
+</div>
+
+</div>
 
 
 @endsection

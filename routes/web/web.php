@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function() {
     Route::get('/admin/comments/replies/{comment}', [App\Http\Controllers\ReplyController::class, 'show'])->name('reply.show');
 
     Route::get('/admin/categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('category.index');
+    Route::post('/admin/categories', [App\Http\Controllers\CategoryController::class, 'store'])->name('category.store');
 
 });
 

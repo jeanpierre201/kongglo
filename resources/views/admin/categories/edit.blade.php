@@ -5,6 +5,7 @@
 <h1>Category</h1>
 
     <div class="col-sm-6">
+
             <form method="post" action="{{route('category.update', $category)}}" enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
@@ -12,22 +13,24 @@
                 <label for="name" class="">Category</label>
                 <input type="text" name="name" class="form-control" id="name" value="{{$category->name}}">
                 </div>
-
-                <button class="btn btn-primary col-sm-6" type="submit">Update category</button>
+        <div class="row">
+                    <div class="col-sm-6">
+                <button class="btn btn-primary col-sm-12" type="submit">Update category</button>
+                   </div>
             </form>
-    </div>
+
             <div class="col-sm-6">
                 <form method="post" action="{{route('category.destroy', $category)}}" enctype="multipart/form-data">
                     @csrf
                     @method('DELETE')
                     <div class="form-group">
-                    <button class="btn btn-danger col-sm-6" type="submit">Delete</button>
+                    <button class="btn btn-danger col-sm-12" type="submit">Delete</button>
                     </div>
                 </form>
             </div>
+        </div>
 
-
-
+    </div>
 
 @endsection
 

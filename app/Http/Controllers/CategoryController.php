@@ -38,7 +38,6 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         Category::create($request->all());
-
         return redirect()->route('category.index');
 
     }
@@ -75,7 +74,10 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $category->update($request->all());
+        return redirect()->route('category.index');
+
     }
 
     /**
@@ -86,6 +88,8 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Category::findOrFail($id)->delete();
+        return redirect()->route('category.index');
+
     }
 }

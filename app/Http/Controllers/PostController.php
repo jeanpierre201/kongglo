@@ -69,7 +69,7 @@ class PostController extends Controller
         $posts = auth()->user()->posts()->paginate(10);
         return view('admin.posts.index', ['posts'=>$posts]);
 
-        //dd($posts);
+        //dd($posts[0]->category->name);
     }
 
     public function destroy(Post $post)

@@ -7,7 +7,7 @@
 @if(Session('message'))
 
 <div class="alert alert-danger">{{Session::get('message')}}</div>
-<!-- <div class="alert alert-danger">{{Session('message')}}</div> -->
+{{-- <!-- <div class="alert alert-danger">{{Session('message')}}</div> --> --}}
 
 @elseif(Session('post-created-message'))
 
@@ -77,8 +77,13 @@
                       <!-- @endcan -->
 
                       </td>
-                      <th>{{$post->category_id ? $post->category->name : "Uncategorized"}}</th>
-                      {{-- <th>{{$post->category->name}}</th>  --}}
+                      <th>
+                          @if(!$post->category->name)
+                          {{"Uncategorized"}}
+                          @else
+                          {{$post->category->name}}
+                          @endif
+                    </th>
                     </tr>
                   @endforeach
                   </tbody>

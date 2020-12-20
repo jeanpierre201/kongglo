@@ -31,12 +31,6 @@ Route::middleware('auth')->group(function() {
     Route::get('/admin/comments/replies', [App\Http\Controllers\ReplyController::class, 'index'])->name('reply.index');
     Route::get('/admin/comments/replies/{comment}', [App\Http\Controllers\ReplyController::class, 'show'])->name('reply.show');
 
-    Route::get('/admin/categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('category.index');
-    Route::post('/admin/categories', [App\Http\Controllers\CategoryController::class, 'store'])->name('category.store');
-    Route::get('/admin/{category}/edit', [App\Http\Controllers\CategoryController::class, 'edit'])->name('category.edit');
-    Route::patch('/admin/{category}/update', [App\Http\Controllers\CategoryController::class, 'update'])->name('category.update');
-    Route::delete('/admin/{category}/destroy', [App\Http\Controllers\CategoryController::class, 'destroy'])->name('category.destroy');
-
 });
 
 

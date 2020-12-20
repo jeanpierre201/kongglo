@@ -34,7 +34,6 @@
             <tr>
               <th>Id</th>
               <th>Name</th>
-              <th>Delete</th>
               <th>Created at</th>
               <th>Updated at</th>
             </tr>
@@ -43,17 +42,23 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
-                <th>Delete</th>
                 <th>Created at</th>
                 <th>Updated at</th>
             </tr>
           </tfoot>
           <tbody>
+          {{$first = true}}
           @foreach($categories as $category)
             <tr>
               <td>{{$category->id}}</td>
-              <td>{{$category->name}}</td>
-              <td></td>
+              <td>
+              @if(!$first)
+                <a href="{{route('category.edit', $category->id)}}">{{$category->name}}</a>
+              @else
+                {{$first = false}}
+                {{$category->name}}
+              @endif
+              </td>
               <td>{{$category->created_at->diffForHumans()}}</td>
               <td>{{$category->updated_at->diffForHumans()}}</td>
             </tr>

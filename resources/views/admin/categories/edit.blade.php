@@ -4,8 +4,6 @@
 
 <h1>Category</h1>
 
-<div class="row">
-
     <div class="col-sm-6">
             <form method="post" action="{{route('category.update', $category)}}" enctype="multipart/form-data">
                 @csrf
@@ -29,8 +27,6 @@
             </div>
 
 
-
-</div>
 
 
 @endsection

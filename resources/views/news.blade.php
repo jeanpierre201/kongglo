@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Home</title>
+  <title>News</title>
 
   <!-- Bootstrap core CSS -->
   <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -17,6 +17,15 @@
 
   <!-- Custom styles for this template -->
   <link href="{{asset('css/blog-home.css')}}" rel="stylesheet">
+
+  <!-- Custom styles for component Portada -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="{{asset('css/components/portada/index.css')}}" rel="stylesheet">
+  <link href="{{asset('css/components/portada/portada.css')}}" rel="stylesheet">
+
+  <!-- Semantic UI -->
+{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" /> --}}
+
 
 </head>
 
@@ -32,7 +41,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/">Home
+            <a class="nav-link" href="/">News
             <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -54,8 +63,8 @@
                 <!-- <button class="btn btn-danger">logout</button> -->
                 </form>
           </li>
-          
-          @else 
+
+          @else
 
           <li class="nav-item">
             <a class="nav-link" href="{{ route('register') }}">Register</a>
@@ -66,7 +75,7 @@
           </li>
 
           @endif
-          
+
         </ul>
       </div>
     </div>
@@ -75,7 +84,9 @@
     <!-- Page Content -->
     <div class="container">
 
-    <h1>Home</h1>
+        <div class="container">
+            <div id="root"></div>
+          </div>
 
     </div>
     <!-- /.container -->
@@ -91,6 +102,12 @@
 <!-- Bootstrap core JavaScript -->
 <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+ <!-- Component Portada - Rss Feed-->
+ <script src="/js/feednami.js"></script>
+
+<!-- Bootstrap React Components -->
+<script src="/js/app.js"></script>
 
 </body>
 

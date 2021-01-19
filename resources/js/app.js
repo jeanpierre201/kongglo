@@ -14,3 +14,4 @@ require('./bootstrap');
 
 //require('./components/Example');
 require('./components/portada/Index');
+require('./components/cnn-image-list/Index');

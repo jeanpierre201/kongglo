@@ -20,8 +20,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
 
+// NEWS
+Route::get('/news/{new}', [App\Http\Controllers\NewsController::class, 'index'])->name('news.index');
+
+// BLOG
+Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
 Route::get('/post/{post}', [App\Http\Controllers\PostController::class, 'show'])->name('post');
 
 Route::middleware('auth')->group(function() {

@@ -32,7 +32,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{{route('home')}}">Home</a>
+            <a class="nav-link" href="{{route('home')}}">News</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="#">Blog
@@ -54,8 +54,8 @@
                 <!-- <button class="btn btn-danger">logout</button> -->
                 </form>
           </li>
-          
-          @else 
+
+          @else
 
           <li class="nav-item">
             <a class="nav-link" href="{{ route('register') }}">Register</a>
@@ -66,7 +66,7 @@
           </li>
 
           @endif
-          
+
         </ul>
       </div>
     </div>

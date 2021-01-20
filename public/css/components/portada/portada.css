@@ -3,6 +3,10 @@
     padding-bottom: 15px;
   }
 
+  .heading a {
+    color: white;
+  }
+
   .heading {
       background-color: #222;
       cursor: pointer;
@@ -67,7 +71,7 @@
 
     .source {
       font-size: 0.7rem;
-      margin-top: -8px;
+      margin-top: 5px;
     }
 
 

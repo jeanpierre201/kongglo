@@ -17,7 +17,7 @@ return (
    <img alt={props.title[index]} src={image} />
    </div>
    <div className="middle aligned content">
-   <a className="header">{props.title[index]}</a>
+   <a href={'/news/kongglonews?title=' + props.title[index] + '&image=' + image +  '&description=' + props.description[index]} className="header">{props.title[index]}</a>
   </div>
   </div>))}
   </div>

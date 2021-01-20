@@ -16,11 +16,11 @@ const Default = ({ children }) => {
 const Portada = (props) => (
     <div>
         <Default>
-        <PortadaDefault title={props.title} image={props.image_lg}/>
+        <PortadaDefault title={props.title} description={props.description} image_md={props.image_md} image={props.image_lg}/>
         </Default>
 
         <Mobile>
-        <PortadaMobile title={props.title} image={props.image_md}/>
+        <PortadaMobile title={props.title} description={props.description} image={props.image_md}/>
         </Mobile>
     </div>
 );

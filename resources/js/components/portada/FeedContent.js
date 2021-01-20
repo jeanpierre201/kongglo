@@ -5,9 +5,10 @@ import Portada from './Portada';
 // To get around this, you can use a proxy.
 
 let i = 0;
-let input_image_lg = [];
-let input_image_md = [];
+const input_image_lg = [];
+const input_image_md = [];
 const input_title = [];
+const input_description = [];
 
 const feednami = window.feednami;
 
@@ -19,6 +20,7 @@ constructor(props) {
         title: [],
         image_lg: [],
         image_md: [],
+        description: [],
         errorMessage: ''
     }
     };
@@ -43,9 +45,12 @@ async componentDidMount() {
                   }
               }
               input_title[i] = entry.title;
+              let remove_after= entry.description.indexOf('<');
+              let result =  entry.description.substring(0, remove_after);
+              input_description[i] = result;
               i++;
           }
-              this.setState({ image_lg: input_image_lg, image_md: input_image_md, title: input_title})})
+              this.setState({ image_lg: input_image_lg, image_md: input_image_md, description: input_description, title: input_title})})
 
     .catch(error => {
         this.setState({ errorMessage: error.message });
@@ -56,7 +61,7 @@ async componentDidMount() {
 
 render() {
     return (
-    <Portada title={this.state.title} image_lg={this.state.image_lg} image_md={this.state.image_md} error={this.state.errorMessage} />
+    <Portada title={this.state.title} description={this.state.description} image_lg={this.state.image_lg} image_md={this.state.image_md} error={this.state.errorMessage} />
     );
 }
 

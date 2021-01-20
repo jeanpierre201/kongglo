@@ -7,6 +7,7 @@ import ItemImageList from './ItemImageList';
 let i;
 let input_image_md_cnn = [];
 let input_title_cnn = [];
+let input_description_cnn = [];
 
 const feednami = window.feednami;
 
@@ -17,6 +18,7 @@ constructor(props) {
     this.state = {
         title: [],
         image_md: [],
+        description: [],
         errorMessage: ''
     }
     };
@@ -32,8 +34,12 @@ async componentDidMount() {
                 input_image_md_cnn[i] = response.entries[i]["media:group"]["media:content"][3]["@"].url;
               }
               input_title_cnn[i] = response.entries[i].title;
+              let remove_after= response.entries[i].description.indexOf('<');
+              let result =  response.entries[i].description.substring(0, remove_after);
+              //console.log(result);
+              input_description_cnn[i] = result;
               }
-              this.setState({ image_md: input_image_md_cnn, title: input_title_cnn})})
+              this.setState({ image_md: input_image_md_cnn, title: input_title_cnn, description: input_description_cnn})})
 
     .catch(error => {
         this.setState({ errorMessage: error.message });
@@ -44,7 +50,7 @@ async componentDidMount() {
 
 render() {
     return (
-    <ItemImageList title={this.state.title} image_md={this.state.image_md} error={this.state.errorMessage} />
+    <ItemImageList title={this.state.title} description={this.state.description} image_md={this.state.image_md} error={this.state.errorMessage} />
     );
 }
 

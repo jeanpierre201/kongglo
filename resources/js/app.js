@@ -15,3 +15,5 @@ require('./bootstrap');
 //require('./components/Example');
 require('./components/portada/Index');
 require('./components/cnn-image-list/Index');
+require('./components/cnn-text-list/Index');
+require('./components/carousels-image-text/Index');

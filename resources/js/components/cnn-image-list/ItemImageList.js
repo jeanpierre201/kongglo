@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid, Image, Label, Segment } from 'semantic-ui-react';
 
 const ItemImageList = (props) => {
 
@@ -11,7 +10,7 @@ return (
 <div className="ui raised segment">
 <a className="ui red ribbon label">CNN</a>
 <span>Latest News</span>
-   <div className="ui items">
+   <div className="ui items" style={{overflowY: "scroll", height: "500px"}}>
    {props.image_md.map((image, index) => (<div className="item" key={index}>
    <div className="ui small image">
    <img alt={props.title[index]} src={image} />

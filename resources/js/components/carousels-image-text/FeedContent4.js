@@ -7,7 +7,7 @@ import CarouselsImageText from './CarouselsImageText';
 let i;
 const input_image_md_cnn = [];
 const input_title_cnn = [];
-const input_description_cnn = [];
+const input_description = [];
 
 const feednami = window.feednami;
 
@@ -29,17 +29,17 @@ async componentDidMount() {
         .then(response => {
 
               // after portada
-              for (i = 0; i < 2; i++) {
+              for (i = 0; i < 5; i++) {
               if(response.entries[i]["media:group"]){
                 input_image_md_cnn[i] = response.entries[i]["media:group"]["media:content"][3]["@"].url;
               }
               input_title_cnn[i] = response.entries[i].title;
-              let remove_after= response.entries[i].description.indexOf('<');
-              let result =  response.entries[i].description.substring(0, remove_after);
-              //console.log(result);
-              input_description_cnn[i] = result;
+              let remove_after2= response.entries[i].description.indexOf('<');
+              let result2 =  response.entries[i].description.substring(0, remove_after2);
+              console.log(result2);
+              input_description[i] = result2;
               }
-              this.setState({ image: input_image_md_cnn, title: input_title_cnn, description: input_description_cnn})})
+              this.setState({ image: input_image_md_cnn, title: input_title_cnn, description: input_description})})
 
     .catch(error => {
         this.setState({ errorMessage: error.message });

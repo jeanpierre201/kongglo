@@ -4,7 +4,10 @@
         {{-- portada --}}
         <div id="root"></div>
 
-        <!-- second menu -->
+        <!-- module 1 -->
         @include('news.partials.modules._module1')
+
+        <!-- module 2 -->
+        @include('news.partials.modules._module2')
 
     </div>

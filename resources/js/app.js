@@ -17,3 +17,4 @@ require('./components/portada/Index');
 require('./components/cnn-image-list/Index');
 require('./components/cnn-text-list/Index');
 require('./components/carousels-image-text/Index');
+require('./components/cnn-single-text/Index');

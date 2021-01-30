@@ -6,7 +6,7 @@ const CarouselsImageText = (props) => {
 
     <div>
 
-        <div className="pt-3 ui column grid">
+        <div className="py-3 ui column grid">
             <div className="column">
                 <div className="ui raised segment">
                     <a className="ui red ribbon label">CNN</a>

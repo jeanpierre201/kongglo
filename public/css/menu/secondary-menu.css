@@ -1,0 +1,37 @@
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    border-bottom: 2px solid rgba(34,36,38,.15);
+  }
+
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+  div.scrollmenu a:hover {
+    border-bottom: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+  }
+
+  div.scrollmenu .active .item {
+    font-weight: 700;
+    border-bottom-style: solid;
+  }
+
+  .ui.secondary.pointing.menu {
+    border-bottom: none!important;
+}
+
+.ui.secondary.pointing.menu .item {
+    border-bottom-width: 2px!important;
+    margin: 0 0 0px!important;
+}
+
+/* .ui.secondary.pointing.menu {
+    border-bottom: 2px solid rgba(34,36,38,.15);
+} */

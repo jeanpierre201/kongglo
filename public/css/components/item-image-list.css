@@ -1,0 +1,11 @@
+@media (min-width: 991.99px) {
+
+    .fix-content {
+        font-size: 0.9em!important;
+        margin-left: -10px!important;
+    }
+
+    .ui.small.image  {
+        width: 125px!important;
+    }
+}

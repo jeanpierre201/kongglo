@@ -5,7 +5,7 @@ const ItemImageList = (props) => {
 return (
     <div>
 
-<div className="ui column grid">
+<div className="ui column grid pb-3">
 <div className="column">
 <div className="ui raised segment">
 <a className="ui red ribbon label">CNN</a>

@@ -19,3 +19,4 @@ require('./components/cnn-text-list/Index');
 require('./components/carousels-image-text/Index');
 require('./components/cnn-single-text/Index');
 require('./components/content-row/Index');
+require('./components/single-image-text/Index');

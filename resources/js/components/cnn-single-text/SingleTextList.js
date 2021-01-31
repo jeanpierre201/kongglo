@@ -5,23 +5,13 @@ const SingleTextList = (props) => {
 
 return (
 <div>
-        {/* <div class="ui card">
-            <div class="content">
-                <div class="header">{props.title[0]}</div>
-            </div>
-            <div class="content">
-                <div class="description">{props.description[0]}</div>
-            </div>
-            <div class="extra content">
-                <i aria-hidden="true" class="user icon"></i>4 Friends</div>
-        </div> */}
 
 <div className="ui column grid">
         <div className="column">
             <div className="ui raised segment">
                 <a className="ui red ribbon label">CNN</a>
                 <span>Latest News</span>
-                <div className="ui relaxed py-3" style={{height: "214px"}} >
+                <div className="ui relaxed py-3" style={{height: "214px", overflow: "auto"}} >
 
                 <div className="ui items">
                     <div className="item">

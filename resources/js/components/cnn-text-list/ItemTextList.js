@@ -10,7 +10,7 @@ return (
             <div className="ui raised segment">
                 <a className="ui red ribbon label">CNN</a>
                 <span>Latest News</span>
-                <div className="ui relaxed divided list" style={{overflowY:"scroll", height: "200px"}} >
+                <div className="ui relaxed divided list item-title-list">
                 {props.title.map((title, index) => (<div className="item" key={index}>
                         <div className="content">
                             <a className="header">{title}</a>

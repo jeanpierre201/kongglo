@@ -16,7 +16,7 @@
   <link href="{{asset('css/app.css')}}" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="{{asset('css/blog-home.css')}}" rel="stylesheet">
+  <link href="{{asset('css/blog/blog-home.css')}}" rel="stylesheet">
 
 </head>
 

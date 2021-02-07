@@ -29,8 +29,8 @@ async componentDidMount() {
         .then(response => {
 
               // after portada
-              for (i = 0; i < 1; i++) {
-              input_image_md_cnn[i] = response.entries[i]["media:group"]["media:content"][3]["@"].url;
+              for (i = 0; i < 3; i++) {
+              input_image_md_cnn[i] = response.entries[i]["media:group"]["media:content"][4]["@"].url;
               input_title_cnn[i] = response.entries[i].title;
               let remove_after= response.entries[i].description.indexOf('<');
               let result =  response.entries[i].description.substring(0, remove_after);

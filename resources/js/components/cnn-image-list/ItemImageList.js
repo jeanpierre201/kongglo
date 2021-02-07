@@ -10,7 +10,7 @@ return (
 <div className="ui raised segment">
 <a className="ui red ribbon label">CNN</a>
 <span>Latest News</span>
-   <div className="pt-1 ui items" style={{overflowY: "scroll", height: "500px"}}>
+   <div className="ui items item-image-list" >
    {props.image_md.map((image, index) => (<div className="item" key={index}>
    <div className="ui small image">
    <img alt={props.title[index]} src={image} />

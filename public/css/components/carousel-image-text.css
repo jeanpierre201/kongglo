@@ -1,0 +1,21 @@
+.carousel-image-text {
+    height: 239px;
+    overflow: hidden;
+    padding-top: 13px;
+}
+
+@media (max-width: 767px) {
+
+    .carousel-image-text {
+    height: 455px;
+    padding-top: 0px;
+    }
+}
+
+/* @media (max-width: 991.99px) {
+
+    .carousel-image-text {
+        height: 378px;
+        padding-top: 0px;
+    }
+} */

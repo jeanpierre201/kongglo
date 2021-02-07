@@ -12,10 +12,10 @@ const CarouselsImageText = (props) => {
                     <a className="ui red ribbon label">CNN</a>
                     <span>Latest News</span>
 
-                    <div id="carouselExampleControls" className="carousel slide" data-ride="carousel" style={{height: "239px", overflow: "auto"}}>
-                        <div className="pt-3 carousel-inner">
+                    <div id="carouselExampleControls" className="carousel slide carousel-image-text" data-ride="carousel">
+                        <div className="carousel-inner">
                         {props.title.map((title, index) => (<div key={index} className={"carousel-item " + (index === 0 ? 'active' : '')}>
-                            <div className="ui items">
+                            <div className="pt-1 ui items">
                                 <div className="item">
                                     <div className="ui medium image"><img src={props.image[index]}/></div>
                                     <div className="content">

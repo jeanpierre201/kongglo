@@ -12,11 +12,48 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+/* ################################ NEWS COMPONENTS ################################### */
+
+
+
+fetchJson().then(function(result) {
+
+    //console.log(result);
+
+    result.forEach(element => searchComponent(element['type']));
+
+});
+
+function searchComponent(params) {
+
+    console.log(params);
+
+    switch (params) {
+        case 'portada':
+          require('./news/components/portada/Index');
+          break;
+        case 'row-single-text':
+          require('./news/components/row-single-text/Index');
+          break;
+        case 'row-image-title':
+          require('./news/components/row-image-title/Index');
+          break;
+        case 'list-title':
+          require('./news/components/list-title/Index');
+          break;
+        case 'single-text':
+          require('./news/components/single-text/Index');
+          break;
+        case 'list-image-title':
+          require('./news/components/list-image-title/Index');
+          break;
+        case 'carousels-image-text':
+          require('./news/components/carousels-image-text/Index');
+          break;
+        default:
+          console.log(`Not component`);
+      }
+
+}
+
 //require('./components/Example');
-require('./components/portada/Index');
-require('./components/cnn-image-list/Index');
-require('./components/cnn-text-list/Index');
-require('./components/carousels-image-text/Index');
-require('./components/cnn-single-text/Index');
-require('./components/content-row/Index');
-require('./components/single-image-text/Index');

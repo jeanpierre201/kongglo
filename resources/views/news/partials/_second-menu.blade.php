@@ -1,46 +1,35 @@
 <div class="container">
-    <div style="margin-top: 70px; overflow-x: auto" class="ui secondary pointing menu">
-        <a class="item active">
-            Latest News
+    <div id="news_second_menu" style="margin-top: 70px; margin-bottom: 20px; overflow-x: auto" class="ui secondary pointing menu">
+
+        <a id="top" class="item {{ (request()->is('/')) ? 'active' : '' }}" href={{route('home')}}>
+            Top Stories
         </a>
-        <a class="item">
+        <a id="world" class="item {{ (request()->is('news/world*')) ? 'active' : '' }}" href={{route('news.world')}}>
+            World
+        </a>
+        <a id="politics" class="item {{ (request()->is('news/politics*')) ? 'active' : '' }}" href={{route('news.politics')}}>
+            Politics
+        </a>
+        <a id="business" class="item {{ (request()->is('news/business*')) ? 'active' : '' }}" href={{route('news.business')}}>
+            Business
+        </a>
+        <a id="sport" class="item {{ (request()->is('news/sport*')) ? 'active' : '' }}" href={{route('news.sport')}}>
             Sport
         </a>
-        <a class="item">
+        <a id="technology" class="item {{ (request()->is('news/technology*')) ? 'active' : '' }}" href={{route('news.technology')}}>
             Technology
         </a>
-        <a class="item">
-            Technology
+        <a id="entertainment" class="item {{ (request()->is('news/entertainment*')) ? 'active' : '' }}" href={{route('news.entertainment')}}>
+            Entertainment
         </a>
-        <a class="item">
-            Technology
+        <a id="science" class="item {{ (request()->is('news/science*')) ? 'active' : '' }}" href={{route('news.science')}}>
+            Science
         </a>
-        <a class="item">
-            Technology
+        <a id="travel" class="item {{ (request()->is('news/travel*')) ? 'active' : '' }}" href={{route('news.travel')}}>
+            Travel
+        </a>
+        <a id="weather" class="item {{ (request()->is('news/weather*')) ? 'active' : '' }}" href={{route('news.weather')}}>
+            Weather
         </a>
     </div>
 </div>
-
-{{-- <div class="container">
-    <div style="margin-top: 10px; overflow: auto" class="scrollmenu">
-        <a class="item active">
-            Latest News
-        </a>
-        <a class="item">
-            Sport
-        </a>
-        <a class="item">
-            Technology
-        </a>
-        <a class="item">
-            Technology
-        </a>
-        <a class="item">
-            Technology
-        </a>
-        <a class="item">
-            Technology
-        </a>
-    </div>
-</div> --}}
-

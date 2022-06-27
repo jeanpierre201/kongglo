@@ -1,15 +1,9 @@
 <div class="container">
 
-    <div class="container">
-        {{-- portada --}}
-        <div id="root"></div>
+    <div id="news" class="container">
 
-        <!-- module 1 -->
-        @include('news.partials.modules._module1')
-
-        <!-- module 2 -->
-        @include('news.partials.modules._module2')
-
-        <div id="module3"></div>
+        <div id="inputs" style="display: none"></div>
 
     </div>
+
+</div>

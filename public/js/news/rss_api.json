@@ -1,0 +1,290 @@
+
+[
+   {
+    "id" : "1",
+    "type" : "rss",
+    "name" : "cnn",
+    "color": "red",
+    "country" : "usa",
+    "languague" : "english",
+    "root" : "https://edition.cnn.com/services/rss/",
+    "content" : {
+        "images" : "yes",
+        "size" : "all"
+    },
+    "components" : [
+        {
+            "type" : "portada"
+        },
+        {
+            "type" : "row-single-text"
+        },
+        {
+            "type" : "row-image-title"
+        },
+        {
+            "type" : "list-title"
+        },
+        {
+            "type" : "single-text"
+        },
+        {
+            "type" : "list-image-title"
+        },
+        {
+            "type" : "carousels-image-text"
+        }
+    ],
+    "categories" : [
+        {
+            "name" : "top",
+            "url" : "http://rss.cnn.com/rss/edition.rss",
+            "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+        },
+        {
+            "name" : "world",
+            "url" : "http://rss.cnn.com/rss/edition_world.rss",
+            "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+        },
+        {
+            "name" : "sport",
+            "url" : "http://rss.cnn.com/rss/edition_sport.rss",
+            "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+        },
+        {
+            "name" : "technology",
+            "url" : "http://rss.cnn.com/rss/edition_technology.rss",
+            "components" : [{"type":"row-single-text"},{"type":"list-title"},{"type":"single-text"} ]
+        },
+        {
+            "name" : "entertainment",
+            "url" : "http://rss.cnn.com/rss/edition_entertainment.rss",
+            "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+        },
+        {
+            "name" : "science",
+            "url" : "http://rss.cnn.com/rss/edition_space.rss",
+            "components" : [{"type":"row-single-text"},{"type":"list-title"},{"type":"single-text"}]
+        },
+        {
+            "name" : "travel",
+            "url" : "http://rss.cnn.com/rss/edition_travel.rss",
+            "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+        },
+        {
+            "name" : "politics",
+            "url" : "http://rss.cnn.com/rss/edition_travel.rss",
+            "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+        },
+        {
+            "name" : "business",
+            "url" : "http://rss.cnn.com/rss/edition_business.rss",
+            "components" : [{"type":"row-single-text"},{"type":"list-title"},{"type":"single-text"}]
+        }
+    ]
+   },
+   {
+    "id" : "2",
+    "type" : "rss",
+    "name" : "bbc",
+    "color": "black",
+    "country" : "uk",
+    "languague" : "english",
+    "root" : "http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml",
+    "content" : {
+        "images" : "no",
+        "size" : "null"
+    },
+    "components" : [
+        {
+            "type" : "row-single-text"
+        },
+        {
+            "type" : "list-title"
+        },
+        {
+            "type" : "single-text"
+        }
+    ],
+    "categories" : [
+        {
+            "name" : "top",
+            "url" : "http://feeds.bbci.co.uk/news/rss.xml",
+            "components" : [{"type":"row-single-text"},{"type":"list-title"},{"type":"single-text"}]
+        },
+        {
+            "name" : "world",
+            "url" : "http://feeds.bbci.co.uk/news/world/rss.xml",
+            "components" : [{"type":"row-single-text"},{"type":"list-title"},{"type":"single-text"}]
+        },
+        {
+            "name" : "technology",
+            "url" : "http://feeds.bbci.co.uk/news/technology/rss.xml",
+            "components" : [{"type":"row-single-text"},{"type":"list-title"},{"type":"single-text"}]
+        },
+        {
+            "name" : "entertainment",
+            "url" : "http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml",
+            "components" : [{"type":"row-single-text"},{"type":"list-title"},{"type":"single-text"}]
+        },
+        {
+            "name" : "science",
+            "url" : "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+            "components" : [{"type":"row-single-text"},{"type":"list-title"},{"type":"single-text"}]
+        },
+        {
+            "name" : "politics",
+            "url" : "http://feeds.bbci.co.uk/news/politics/rss.xml",
+            "components" : [{"type":"row-single-text"},{"type":"list-title"},{"type":"single-text"}]
+        },
+        {
+            "name" : "business",
+            "url" : "http://feeds.bbci.co.uk/news/business/rss.xml",
+            "components" : [{"type":"row-single-text"},{"type":"list-title"},{"type":"single-text"}]
+        }
+    ]
+
+    },
+    {
+        "id" : "3",
+        "type" : "rss",
+        "name" : "the guardian",
+        "color": "#052962",
+        "country" : "uk",
+        "languague" : "english",
+        "root" : "https://www.theguardian.com/world/rss",
+        "content" : {
+            "images" : "yes",
+            "size" : "thumbnails"
+        },
+        "components" : [
+            {
+                "type" : "list-image-title"
+            },
+            {
+                "type" : "row-single-text"
+            },
+            {
+                "type" : "list-title"
+            },
+            {
+                "type" : "single-text"
+            }
+        ],
+        "categories" : [
+            {
+                "name" : "top",
+                "url" : "https://www.theguardian.com/uk/rss",
+                "components" : [{"type" : "list-image-title"}, {"type" : "row-single-text"}, {"type" : "list-title"}, {"type" : "single-text"}]
+            },
+            {
+                "name" : "world",
+                "url" : "https://www.theguardian.com/world/rss",
+                "components" : [{"type" : "list-image-title"}, {"type" : "row-single-text"}, {"type" : "list-title"}, {"type" : "single-text"}]
+            },
+            {
+                "name" : "sport",
+                "url" : "https://www.theguardian.com/uk/sport/rss",
+                "components" : [{"type" : "list-image-title"}, {"type" : "row-single-text"}, {"type" : "list-title"}, {"type" : "single-text"}]
+            },
+            {
+                "name" : "technology",
+                "url" : "https://www.theguardian.com/uk/technology/rss",
+                "components" : [{"type" : "list-image-title"}, {"type" : "row-single-text"}, {"type" : "list-title"}, {"type" : "single-text"}]
+            },
+            {
+                "name" : "science",
+                "url" : "https://www.theguardian.com/science/rss",
+                "components" : [{"type" : "list-image-title"}, {"type" : "row-single-text"}, {"type" : "list-title"}, {"type" : "single-text"}]
+            },
+            {
+                "name" : "travel",
+                "url" : "https://www.theguardian.com/uk/travel/rss",
+                "components" : [{"type" : "list-image-title"}, {"type" : "row-single-text"}, {"type" : "list-title"}, {"type" : "single-text"}]
+            },
+            {
+                "name" : "business",
+                "url" : "https://www.theguardian.com/uk/business/rss",
+                "components" : [{"type" : "list-image-title"}, {"type" : "row-single-text"}, {"type" : "list-title"}, {"type" : "single-text"}]
+            }
+        ]
+    },
+    {
+        "id" : "4",
+        "type" : "rss",
+        "name" : "abc-news",
+        "color": "#000000",
+        "country" : "usa",
+        "languague" : "english",
+        "root" : "https://edition.cnn.com/services/rss/",
+        "content" : {
+            "images" : "yes",
+            "size" : "all"
+        },
+        "components" : [
+            {
+                "type" : "portada"
+            },
+            {
+                "type" : "row-single-text"
+            },
+            {
+                "type" : "row-image-title"
+            },
+            {
+                "type" : "list-title"
+            },
+            {
+                "type" : "single-text"
+            },
+            {
+                "type" : "list-image-title"
+            },
+            {
+                "type" : "carousels-image-text"
+            }
+        ],
+        "categories" : [
+            {
+                "name" : "top",
+                "url" : "http://feeds.abcnews.com/abcnews/topstories",
+                "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+            },
+            {
+                "name" : "world",
+                "url" : "http://feeds.abcnews.com/abcnews/internationalheadlines",
+                "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+            },
+            {
+                "name" : "sport",
+                "url" : "https://abcnews.go.com/abcnews/sportsheadlines",
+                "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+            },
+            {
+                "name" : "technology",
+                "url" : "http://feeds.abcnews.com/abcnews/technologyheadlines",
+                "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+            },
+            {
+                "name" : "entertainment",
+                "url" : "http://feeds.abcnews.com/abcnews/entertainmentheadlines",
+                "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+            },
+            {
+                "name" : "travel",
+                "url" : "http://feeds.abcnews.com/abcnews/travelheadlines",
+                "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+            },
+            {
+                "name" : "politics",
+                "url" : "https://rss2.feedspot.com/https://abcnews.go.com/Politics",
+                "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+            },
+            {
+                "name" : "business",
+                "url" : "https://abcnews.go.com/abcnews/moneyheadlines",
+                "components" : [{"type":"portada"},{"type":"row-image-title"},{"type":"list-image-title"},{"type":"carousels-image-text"}]
+            }
+        ]
+       }
+]
